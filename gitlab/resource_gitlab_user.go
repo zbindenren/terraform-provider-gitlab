@@ -28,6 +28,7 @@ func resourceGitlabUser() *schema.Resource {
 				Type:      schema.TypeString,
 				Optional:  true,
 				Sensitive: true,
+				ForceNew:  true,
 			},
 			"email": {
 				Type:     schema.TypeString,
@@ -66,6 +67,7 @@ func resourceGitlabUser() *schema.Resource {
 			"reset_password": {
 				Type:     schema.TypeBool,
 				Optional: true,
+				ForceNew: true,
 			},
 		},
 	}
